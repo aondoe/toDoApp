@@ -12,8 +12,7 @@ function ToDoModel(){
     return(
         <div>
             <h1 id="todoHead">To Do List</h1>
-                {ourTasks}
-                
+                {ourTasks}                
         </div>
     )
 }
