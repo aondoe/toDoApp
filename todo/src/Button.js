@@ -12,6 +12,6 @@ const MyButton = styled(Button)({
   padding: '0 30px',
 });
 
-export default function StyledComponents() {
+export default function StyledComponents(){
   return <MyButton>Styled Components</MyButton>;
 }
