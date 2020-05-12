@@ -13,13 +13,7 @@ function ToDoModel(){
         <div>
             <h1 id="todoHead">To Do List</h1>
                 {ourTasks}
-
-            {/*
-            This line below is for a button using Material UI. Pretty cool stuff.
-    
-                <MyButton>Testing the Material UI style</MyButton> 
-             
-             */}
+                
         </div>
     )
 }
