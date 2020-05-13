@@ -14,8 +14,8 @@ import './todo.css';
 
 document.title="To Do List";
 
-function clickY(){
-    alert("This is your message!");
+function clickY(){      //Test function to test event handling.
+    alert("Go AWAY You troll!");
 }
 
 class ToDoModel extends React.Component{    //This is the class way form a component
@@ -41,6 +41,6 @@ const ourTasks=todoList.map(tasks=> <ToDoFormat key={tasks.id} task_name={tasks.
                 </div>
             )
         }
-    }
+}//Ending brace for the ToDoModel class
 
 export default ToDoModel;
