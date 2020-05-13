@@ -14,6 +14,10 @@ import './todo.css';
 
 document.title="To Do List";
 
+function clickY(){
+    alert("This is your message!");
+}
+
 class ToDoModel extends React.Component{    //This is the class way form a component
     constructor(){
         super();    //The super() allows us to set our own variables.
@@ -32,6 +36,8 @@ const ourTasks=todoList.map(tasks=> <ToDoFormat key={tasks.id} task_name={tasks.
                 <div>
                     <h1 id="todoHead">To Do List</h1>
                         {ourTasks}                
+
+                        <button onClick={clickY}>Check Me</button>
                 </div>
             )
         }
