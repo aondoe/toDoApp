@@ -31,13 +31,14 @@ render(){   //Render method only applies to class-formed components
 /**
  * The line below allows us to create a variable which will hold the array 'todoList' with the higher order function .map() 
 */    
-const ourTasks=todoList.map(tasks=> <ToDoFormat key={tasks.id} task_name={tasks.task_name} finished={tasks.finshed} item={tasks} />);  
+const ourTasks=todoList.map(tasks=> <ToDoFormat key={tasks.id} task_name={tasks.task_name} finished={tasks.finshed} item={tasks} />);
             return(
                 <div>
                     <h1 id="todoHead">To Do List</h1>
                         {ourTasks}                
 
-                        <button onClick={clickY}>Check Me</button>
+                        <button onMouseOver={clickY}>Mouse Over</button>
+
                 </div>
             )
         }
