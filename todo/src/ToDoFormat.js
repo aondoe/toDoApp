@@ -4,8 +4,6 @@ import MyButton from "./Button";
 import Button from '@material-ui/core/Button';
 import "./todo.css"
 
-//Below is the model for the tasks and todo.
-
 let taskClass="taskBox";
 
 function ToDoFormat(props){
@@ -24,9 +22,8 @@ function ToDoFormat(props){
                                     {props.item.finished?"Completed":"Not FINISHED"}
                                 </p>
                                 <p>
-                                    <MyButton>This will do something in the future</MyButton> 
+                                    <MyButton>This will do something in the future</MyButton>
                                 </p>
-
                         </div>
                     </div>
                 <div class="col-lg-4">
