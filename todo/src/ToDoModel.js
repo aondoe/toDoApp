@@ -21,9 +21,9 @@ function clickY(){      //Test function to test event handling.
 class ToDoModel extends React.Component{    //This is the class way form a component
     constructor(){
         super();    //The super() allows us to set our own variables.
-        this.state={
-            todos: todoList //In the class based component this will set todos to state.
-        }
+            this.state={
+                todos: todoList //In the class based component this will set todos to state.
+            }
     }
 
 render(){   //Render method only applies to class-formed components
