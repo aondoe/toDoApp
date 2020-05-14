@@ -35,7 +35,7 @@ const ourTasks=todoList.map(tasks=> <ToDoFormat key={tasks.id} task_name={tasks.
             return(
                 <div>
                     <h1 id="todoHead">To Do List</h1>
-                        {ourTasks}                
+                        {ourTasks}
 
                         <button onMouseOver={clickY}>Mouse Over</button>
 
