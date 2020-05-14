@@ -17,7 +17,7 @@ function ToDoFormat(props){
                  <div class="col-lg-7">
                     <div class={taskClass}>
                             <h3>
-                                <input type="checkbox"  checked={props.item.finished} />
+                                <input type="checkbox"  checked={props.item.finished} onchange={()=>alert("There was a change")}/>
                                     {props.task_name}
                             </h3>
                                 <p class="response" onclick="alert('Suspend')">
