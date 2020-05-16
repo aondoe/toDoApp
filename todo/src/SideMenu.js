@@ -19,20 +19,18 @@ class SideMenu extends React.Component{
         this.decrement=this.decrement.bind(this);
     }
 
+    // this.setState({counter:this.state.counter+1})                <!------------------This is discouraged
     increment(){    //Define a method to deal with state called increment
-// this.setState({counter:this.state.counter+1})                <!------------------This is discouraged
-
-        this.setState((oldState)=>{//<!----------------This is the correct way to to deal with state.
-            return{counter: oldState.counter+1}
+           this.setState((oldState)=>{//<!----------------This is the correct way to to deal with state.
+        return{counter: oldState.counter+1}
         })
     }
 
+// this.setState({counter:this.state.counter-1})<!------------------This is discouraged
 //Below is a method to attach to the state object property: 'counter' and it will decrease the counter property.
     decrement(){//Define a method to deal with state called increment
-// this.setState({counter:this.state.counter-1})<!------------------This is discouraged
-
-        this.setState((oldState)=>{ //<!----------------This is the correct way to to deal with state.
-            return{counter: oldState.counter-1}
+           this.setState((oldState)=>{ //<!----------------This is the correct way to to deal with state.
+        return{counter: oldState.counter-1}
         })
     }
 
