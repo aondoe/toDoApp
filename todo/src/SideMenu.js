@@ -14,9 +14,10 @@ class SideMenu extends React.Component{
         }
 
 //To use a method you created on a state, you need to bind the method, like so bellow.
-        this.increment=this.increment.bind(this);
+    this.increment=this.increment.bind(this);
 // Here is another method below to decrement the counter number.
-        this.decrement=this.decrement.bind(this);
+    this.decrement=this.decrement.bind(this);
+    
     }
 
     // this.setState({counter:this.state.counter+1})                <!------------------This is discouraged
