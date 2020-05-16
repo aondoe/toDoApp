@@ -44,7 +44,7 @@ class ToDoClass extends React.Component{
                     </div>
                 <div class="col-lg-4">
                 </div>
-             </div>   
+             </div>
         </div>
     )}
 }

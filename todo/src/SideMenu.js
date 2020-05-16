@@ -9,7 +9,7 @@ class SideMenu extends React.Component{
 
         this.state={
             counter:0,
-            name:"Mr Miagi's",
+            name:"Aondongu",
             isLoggedIn:true
         }
 
@@ -21,7 +21,7 @@ class SideMenu extends React.Component{
     this.setZero=this.setZero.bind(this);
 }
 
-    // this.setState({counter:this.state.counter+1})                <!------------------This is discouraged
+// this.setState({counter:this.state.counter+1})                <!------------------This is discouraged
     increment(){    //Define a method to deal with state called increment
            this.setState((oldState)=>{//<!----------------This is the correct way to to deal with state.
         return{counter: oldState.counter+1}
@@ -51,13 +51,13 @@ class SideMenu extends React.Component{
                     <div class="col-lg-4"></div>
                         <div class="sideAtt bg-primary text-white">
                             <div class="form-group text-center text-white">
-                                    <h1>
-                                        {this.state.name} counter: {this.state.counter}
-                                    </h1>
+                                <h1>
+                                    counter: {this.state.counter} {/*<----The counter property from the state object*/}
+                                </h1>
                             <button onClick={this.increment}>Count Up</button>  {/*Increase the number in the counter*/}
-                            <br/>
+                                <br/>
                             <button onClick={this.decrement}>Count Down</button>    {/*Decrease the number in the counter*/}
-                            <br/>
+                                <br/>
                             <button onClick={this.setZero}>Set to ZERO</button>    {/*Decrease the number in the counter*/}
                             </div>
                         </div>
