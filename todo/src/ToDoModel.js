@@ -16,9 +16,6 @@ import SideMenu from './SideMenu'   //This is a test
 
 document.title="To Do List";        //Change the window title at the top.
 
-const clicky=function (){      //Test function to test event handling.
-    alert("Go AWAY You troll!")
-};
 
 /*
  * This is the class way to make a component. If you don't write the extends keyword with React.Component you will have to import
@@ -33,6 +30,20 @@ const clicky=function (){      //Test function to test event handling.
                 this.state={
                     todos: todoList //In the class based component this will set 'todos' to value todoList, which will set the state.
                 }
+            this.changeCheck=this.changeCheck.bind(this)
+        }
+        
+    changeCheck(id){
+        this.setState((oldState)=>{
+            const updatedTo=oldState.todos.map(todo=>{
+                if(todo.id===id){
+                    todo.completed=!todo.completed
+                }
+                    console.log("Made some changes", id);
+                    return todo;
+                })
+            return {todos: updatedTo}
+        })
     }
 
 render(){   //Render method only applies to class-formed components
@@ -44,10 +55,11 @@ render(){   //Render method only applies to class-formed components
  */
 const ourTasks=this.state.todos.map(tasks=>
         <ToDoClass 
-            key={tasks.id} 
-            task_name={tasks.task_name} 
-            finished={tasks.finshed} 
-            item={tasks} 
+            key={tasks.id}
+            task_name={tasks.task_name}
+            finished={tasks.finshed}
+            item={tasks}
+            changeCheck={this.changeCheck}
         />);
 
 const sideMenu=<SideMenu counter={0}/>

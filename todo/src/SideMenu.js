@@ -21,7 +21,7 @@ class SideMenu extends React.Component{
     this.setZero=this.setZero.bind(this);
 }
 
-// this.setState({counter:this.state.counter+1})                <!------------------This is discouraged
+//this.setState({counter:this.state.counter+1})                <!------------------This is discouraged
     increment(){    //Define a method to deal with state called increment
            this.setState((oldState)=>{//<!----------------This is the correct way to to deal with state.
         return{counter: oldState.counter+1}
@@ -43,9 +43,8 @@ class SideMenu extends React.Component{
         })
     }
 
-
     render(){
-        return (
+        return(
             <div>
                 <div class="row">
                     <div class="col-lg-4"></div>
