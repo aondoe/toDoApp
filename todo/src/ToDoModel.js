@@ -32,12 +32,12 @@ document.title="To Do List";        //Change the window title at the top.
                 }
             this.changeCheck=this.changeCheck.bind(this)
         }
-        
+
     changeCheck(id){
         this.setState((oldState)=>{
             const updatedTo=oldState.todos.map(todo=>{
                 if(todo.id===id){
-                    todo.completed=!todo.completed
+                    todo.finished=!todo.finished
                 }
                     console.log("Made some changes", id);
                     return todo;

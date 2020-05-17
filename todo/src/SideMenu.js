@@ -46,21 +46,19 @@ class SideMenu extends React.Component{
     render(){
         return(
             <div>
-                <div class="row">
-                    <div class="col-lg-4"></div>
-                        <div class="sideAtt bg-primary text-white">
-                            <div class="form-group text-center text-white">
-                                <h1>
-                                    counter: {this.state.counter} {/*<----The counter property from the state object*/}
-                                </h1>
-                            <button onClick={this.increment}>Count Up</button>  {/*Increase the number in the counter*/}
-                                <br/>
-                            <button onClick={this.decrement}>Count Down</button>    {/*Decrease the number in the counter*/}
-                                <br/>
-                            <button onClick={this.setZero}>Set to ZERO</button>    {/*Decrease the number in the counter*/}
-                            </div>
+                <div class="col-lg-4"></div>
+                    <div class="sideAtt bg-primary text-white">
+                        <div class="form-group text-center text-white">
+                            <h1>
+                                counter: {this.state.counter} {/*<----The counter property from the state object*/}
+                            </h1>
+                        <button onClick={this.increment}>Count Up</button>  {/*Increase the number in the counter*/}
+                            <br/>
+                        <button onClick={this.decrement}>Count Down</button>    {/*Decrease the number in the counter*/}
+                            <br/>
+                        <button onClick={this.setZero}>Set to ZERO</button>    {/*Decrease the number in the counter*/}
                         </div>
-                </div>
+                    </div>
             </div>
         )}
 }

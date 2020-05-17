@@ -12,7 +12,7 @@ body{
 .taskBoxComp{
     margin:10px;
     padding:15px;
-    border:3px solid green;
+    border:5px solid lightgreen;
 }
 .taskBoxIncomp{
     margin:10px;

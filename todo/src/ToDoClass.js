@@ -20,7 +20,7 @@ render(){
              <div class="col-lg-1">
                 </div>
                  <div class="col-lg-7">
-                    <div class={taskClass}>
+                    <div class={this.props.item.finished?"taskBoxComp":"taskBoxIncomp"}>
                             <h3>    
                                 <input 
                                     type="checkbox"
@@ -35,8 +35,6 @@ render(){
                             <p>Id: {this.props.item.id}</p>
                         </div>
                     </div>
-                <div class="col-lg-4">
-                </div>
              </div>
         </div>
     )}
