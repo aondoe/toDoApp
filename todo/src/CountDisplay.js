@@ -26,6 +26,12 @@ class CountDisplay extends React.Component{
 //this.setState({counter:this.state.counter+1})                <!------------------This is discouraged
     increment(){    //Define a method to deal with state called increment
            this.setState((oldState)=>{//<!----------------This is the correct way to to deal with state.
+            if(oldState.counter%2===0){
+                console.log(oldState.counter+"is Fizz")
+            }
+            else{
+                console.log(oldState.counter+"is Buzz");
+            }
         return{counter: oldState.counter+1}
         })
     }
