@@ -40,7 +40,13 @@ class CountDisplay extends React.Component{
 //Below is a method to attach to the state object property: 'counter' and it will decrease the counter property.
     decrement(){//Define a method to deal with state called increment
            this.setState((oldState)=>{ //<!----------------This is the correct way to to deal with state.
-        return{counter: oldState.counter-1}
+            if(oldState.counter%2===0){
+                console.log(oldState.counter+"is Fizz")
+            }
+            else{
+                console.log(oldState.counter+"is Buzz");
+            }
+            return{counter: oldState.counter-1}
         })
     }
 
