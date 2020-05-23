@@ -25,28 +25,28 @@ class CountDisplay extends React.Component{
 
 //this.setState({counter:this.state.counter+1})                <!------------------This is discouraged
     increment(){    //Define a method to deal with state called increment
-           this.setState((oldState)=>{//<!----------------This is the correct way to to deal with state.
-            if(oldState.counter%2===0){
-                return {calculate:" FIZZZ"}
+           this.setState(()=>{//<!----------------This is the correct way to to deal with state.
+            if(this.state.counter%2===0){
+                return {counter:this.state.counter+1, calculate:"BUZZZZ"};
             }
-            else{
-                return {calculate:" BUUZZ"}
+            if(!(this.state.counter%2===0)){
+                return{counter:this.state.counter+1, calculate:"FIZZZZ"};
             }
-        return{counter: oldState.counter+1}
+        return{counter: this.state.counter+1}
         })
     }
 
 // this.setState({counter:this.state.counter-1})<!------------------This is discouraged
 //Below is a method to attach to the state object property: 'counter' and it will decrease the counter property.
     decrement(){//Define a method to deal with state called increment
-           this.setState((oldState)=>{ //<!----------------This is the correct way to to deal with state.
-            if(oldState.counter%2===0){
-                return {calculate:"is Fizz"};
+           this.setState(()=>{ //<!----------------This is the correct way to to deal with state.
+            if(this.state.counter%2===0){
+                return {counter:this.state.counter-1, calculate:"BUZZZ"}
             }
-            else{
-                return {calculate: "just pitch"};
+            if(!(this.state.counter%2===0)){
+                return {counter:this.state.counter-1, calculate: "is FIzz"};
             }
-            return{counter: oldState.counter-1};
+            return{counter: this.state.counter-1};
         })
     }
 
@@ -75,6 +75,7 @@ class CountDisplay extends React.Component{
                                 {this.state.name+"'s   "}
                                  counter: {this.state.counter} {/*<----The counter property from the state object*/}
                             </h1>
+                            <h2>{this.state.calculate}</h2>
                                 <div class="form-group">
                                     <label>Your Name</label><input id="newName" class="text" onChange={this.setName} />
                                 </div>

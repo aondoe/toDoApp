@@ -8,9 +8,7 @@ import FinishList from './FinishList'   //This is a test
 
 
 /**
- * If a line is commented out, that menas that it is part of the functional method of creating components.
- * 
- * 
+ * If a line is commented out, that menas that it is part of the functional method of creating components. 
  * Below if the code is not commented out. It is written in a class-based way.
 */
 
