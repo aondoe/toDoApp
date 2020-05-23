@@ -4,6 +4,11 @@ body{
 #todoHead{
     margin-left:10px;
 }
+.taskHead{
+    font-size:20px;
+    color:darkblue;
+    font-weight: bolder;
+}
 .taskBox{
     margin:10px;
     padding:15px;

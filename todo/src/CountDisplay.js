@@ -8,7 +8,7 @@ class CountDisplay extends React.Component{
 
         this.state={
             counter:0,
-            calcualte:0,
+            calculate:0,
             name:"Aondongu",
             isLoggedIn:true
         }
@@ -27,10 +27,10 @@ class CountDisplay extends React.Component{
     increment(){    //Define a method to deal with state called increment
            this.setState((oldState)=>{//<!----------------This is the correct way to to deal with state.
             if(oldState.counter%2===0){
-                console.log(oldState.counter+"is Fizz")
+                return {calculate:" FIZZZ"}
             }
             else{
-                console.log(oldState.counter+"is Buzz");
+                return {calculate:" BUUZZ"}
             }
         return{counter: oldState.counter+1}
         })
@@ -41,12 +41,12 @@ class CountDisplay extends React.Component{
     decrement(){//Define a method to deal with state called increment
            this.setState((oldState)=>{ //<!----------------This is the correct way to to deal with state.
             if(oldState.counter%2===0){
-                console.log(oldState.counter+"is Fizz")
+                return {calculate:"is Fizz"};
             }
             else{
-                console.log(oldState.counter+"is Buzz");
+                return {calculate: "just pitch"};
             }
-            return{counter: oldState.counter-1}
+            return{counter: oldState.counter-1};
         })
     }
 

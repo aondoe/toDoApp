@@ -86,6 +86,11 @@ const ourTasks=this.state.todos.map(tasks=>
         />);
 
 const countDisp=<CountDisplay counter={0}/>
+
+//Below is another variable which map the todoList array to the ToDoClass component. 
+/**
+ * This COMPONENT WILL filster only display tasks which have been completed.
+ */
 const doneList=this.state.todos.filter(task=>task.finished===true).map(tasks=><ToDoClass 
     key={tasks.id}
     task_name={tasks.task_name}
@@ -104,7 +109,7 @@ return(
                     </div>
                 <div class="col-4">
                     <h1 id="todoHead">Completed List</h1>
-                    {doneList}                    
+                    {doneList}
                 </div>
             </div>
                 {countDisp}
