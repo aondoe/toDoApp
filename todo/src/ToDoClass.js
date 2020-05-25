@@ -1,8 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import MyButton from "./Button";
-import todoList from './TodoList'
-import Button from '@material-ui/core/Button';
 import "./todo.css";
 
 let taskClass="taskBox";
@@ -14,10 +10,10 @@ class ToDoClass extends React.Component{
 
 render(){
     return(
-    <div>
+        <div>
          <div class="row">
                  <div class="col-lg-12">
-                    <div class={this.props.item.finished?"taskBoxComp":"taskBoxIncomp"}>
+                    <div stylestyle={{display: this.props.item.finished? "display:none":"display:block"}} class={this.props.item.finished?"taskBoxComp":"taskBoxIncomp"}>
                             <span class="taskHead">
                                 <input
                                     type="checkbox"

@@ -4,7 +4,6 @@ import todoList from "./TodoList";
 import ToDoClass from './ToDoClass';        //This is a component created using class 
 import './todo.css';    //css file for todoApp
 import CountDisplay from './CountDisplay'   //This is a test
-import FinishList from './FinishList'   //This is a test
 
 
 /**
@@ -59,13 +58,6 @@ document.title="To Do List";        //Change the window title at the top.
         })
     }
 
-    // finishList(id){
-    //     this.setState((oldState)=>{
-    //         const finThings=oldState.todos.filter(task=>task.finished===true)
-    //             return {todo:finThings};
-    //         })
-    // }
-
 
 render(){   //Render method only applies to class-formed components
 
@@ -89,7 +81,8 @@ const countDisp=<CountDisplay counter={0}/>
 /*
  * This COMPONENT WILL filster only display tasks which have been completed.
  */
-const doneList=this.state.todos.filter(task=>task.finished===true).map(tasks=><ToDoClass 
+
+const doneList=this.state.todos.filter(task=>task.finished===true).map(tasks=><ToDoClass
     key={tasks.id}
     task_name={tasks.task_name}
     finished={tasks.finshed}
