@@ -20,7 +20,7 @@ function ToDoFormat(props){
 
                                     {props.item.finished?" True":"Not True"};
                             </h3>
-                                <p class="response" onclick="alert('Suspend')">
+                                <p class="response">
                                 </p>
                                 <p>
                                     <MyButton>This will do something in the future</MyButton>

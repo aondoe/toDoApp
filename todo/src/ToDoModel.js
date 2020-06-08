@@ -30,8 +30,8 @@ document.title="To Do List";        //Change the window title at the top.
                     todos: todoList, //In the class based component this will set 'todos' to value todoList, which will set the state.
                     completed:todoList.finished
                 }
-            this.changeCheck=this.changeCheck.bind(this)
-            this.compList=this.compList.bind(this)
+            this.changeCheck=this.changeCheck.bind(this);
+            this.compList=this.compList.bind(this);
         }
         
     changeCheck(id){
@@ -51,8 +51,8 @@ document.title="To Do List";        //Change the window title at the top.
             const newList=oldState.todos.map(todo=>{
                 if(todo.id===id){
                     if(todo.finished===true){
-                        return todo
-                    }    
+                        return todo;
+                    }
                 }
             })
         })
