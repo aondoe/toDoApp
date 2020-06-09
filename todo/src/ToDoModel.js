@@ -1,7 +1,7 @@
 import React from 'react';
 import todoList from "./TodoList";
 // import ToDoFormat from './ToDoFormat';       This is a functional component
-import ToDoClass from './ToDoClass';        //This is a component created using class 
+import ToDoClass from './ToDoClass';        //This is a component created using class it holds the event handlers.
 import './todo.css';    //css file for todoApp
 import CountDisplay from './CountDisplay'   //This is a test
 
@@ -35,7 +35,8 @@ document.title="To Do List";        //Change the window title at the top.
         }
         
     changeCheck(id){
-        this.setState((oldState)=>{
+        this.setState((oldState)=>{     //The setState() takes a callback function, here we use an anonymous function with a variable inside
+            //The variable below holds 
             const updatedTo=oldState.todos.map(todo=>{
                 if(todo.id===id){
                     todo.finished=!todo.finished
