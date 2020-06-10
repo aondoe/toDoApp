@@ -9,6 +9,7 @@ import CountDisplay from './CountDisplay'   //This is a test
 /*
  * If a line is commented out, that menas that it is part of the functional method of creating components.
  * Below if the code is not commented out. It is written in a class-based way.
+ * 
 */
 
 //let ourTasks=todoList.map(tasks=> <ToDoFormat key={tasks.id} task_name={tasks.task_name} finished={tasks.finshed} item={tasks} />);
